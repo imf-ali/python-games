@@ -1,4 +1,3 @@
-from dis import dis
 import pygame
 pygame.init()
 display = pygame.display.set_mode((640,480), 0, 32)
@@ -10,6 +9,6 @@ while not game_over:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             game_over = True
-    display.blit(sprite1, (0,0))
+    display.blit(sprite1, (320,240))  # x,y coordinates
     pygame.display.update()
 pygame.quit()
