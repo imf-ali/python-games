@@ -22,13 +22,13 @@ while not game_over:
         if event.type == pygame.MOUSEBUTTONDOWN:
             x, y = event.pos
             if(button_rect[0] <= x <= button_rect[0] + button_width and
-                button_rect[1] <= x <= button_rect[1] + button_height):
+                button_rect[1] <= y <= button_rect[1] + button_height):
                 game_over = True
         if event.type == pygame.MOUSEMOTION:
             x, y = event.pos
 
     if(button_rect[0] <= x <= button_rect[0] + button_width and
-        button_rect[1] <= x <= button_rect[1] + button_height):
+        button_rect[1] <= y <= button_rect[1] + button_height):
         pygame.draw.rect(screen, button_over_colour, button_rect)
     else:
         pygame.draw.rect(screen, button_colour, button_rect)
